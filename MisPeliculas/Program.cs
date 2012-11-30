@@ -14,7 +14,7 @@ namespace MisPeliculas
         [STAThread]
         static void Main()
         {
-            Database.SetInitializer<DALcontext>(new DropCreateDatabaseIfModelChanges<DALcontext>());
+            Database.SetInitializer<DALcontext>(new CreateDatabaseIfNotExists<DALcontext>());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
